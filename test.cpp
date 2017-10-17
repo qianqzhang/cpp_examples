@@ -4,7 +4,7 @@
 #include <set>
 #include <exception>
 
-#include "/home/odin/zhangqianqiankevin/code/third-64/libconfig/include/libconfig.h++"
+#include "libconfig.h++"
 using namespace std;
 
 using namespace libconfig;
@@ -119,11 +119,11 @@ int main(int argc, char* argv[]) {
     }
 
     string config_file = argv[1];
-    test("./deep_eta_online_traffic_data.conf", "traffic_data_online", "instances", 1, "server_list");
+    test("./conf.conf", "online", "instances", 1, "server_list");
     vector<pair<int8_t, string>> vec;
     vec.push_back(make_pair(0, "traffic_data_online"));
     vec.push_back(make_pair(0, "instances"));
     vec.push_back(make_pair(1, "1"));
     vec.push_back(make_pair(0, "server_list"));
-    test2("./deep_eta_online_traffic_data.conf", vec);
+    test2("./conf.conf", vec);
 }
